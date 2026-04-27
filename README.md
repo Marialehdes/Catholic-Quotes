@@ -34,6 +34,8 @@ The Catholic Quote Generator presents a beautifully styled quote card on every v
 
 ## How to Run
 
+Live Demo: https://marialehdes.github.io/Catholic-Quotes/
+
 No build tools or server required.
 
 1. Clone or download this repository
