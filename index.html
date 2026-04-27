@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catholic Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Playfair Display (serif, for quotes) and Lato (sans-serif, for UI) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- Site header with decorative cross symbol -->
+        <header class="site-header">
+            <span class="cross-symbol">&#10013;</span>
+            <h1 class="site-title">Catholic Quotes</h1>
+            <p class="site-subtitle">Words of faith, hope, and love</p>
+        </header>
+
+        <!-- Main quote card -->
+        <main class="card">
+
+            <!-- Category filter buttons -->
+            <div class="filters" role="group" aria-label="Filter quotes by category">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="saints">Saints</button>
+                <button class="filter-btn" data-category="scripture">Scripture</button>
+                <button class="filter-btn" data-category="inspiration">Inspiration</button>
+            </div>
+
+            <!-- Quote display area — fades in/out on change -->
+            <div class="quote-container" id="quote-container">
+                <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+                <blockquote class="quote-text" id="quote-text"></blockquote>
+                <div class="divider" aria-hidden="true"></div>
+                <cite class="quote-author" id="quote-author"></cite>
+                <span class="category-badge" id="category-badge"></span>
+            </div>
+
+            <!--
+                Two action buttons: New Quote (primary) and Save Favorite (outline).
+                On small screens these stack vertically via a media query.
+            -->
+            <div class="card-actions">
+                <button class="btn-new-quote" id="btn-new-quote" aria-label="Show a new quote">
+                    New Quote
+                </button>
+                <button class="btn-save" id="btn-save" aria-label="Save this quote to favorites" aria-pressed="false">
+                    &#9825; Save
+                </button>
+            </div>
+
+        </main>
+
+        <!--
+            Favorites section.
+            Hidden by default (via the `hidden` attribute) and revealed by JavaScript
+            only when at least one quote has been saved. JavaScript builds the list
+            items dynamically using DOM methods, so no static content lives here.
+        -->
+        <section class="favorites-section" id="favorites-section" hidden aria-label="Saved favorites">
+            <div class="favorites-header">
+                <span class="fav-header-icon" aria-hidden="true">&#9829;</span>
+                <h2 class="favorites-title">Saved Favorites</h2>
+            </div>
+            <!-- Favorite quote items are injected here by renderFavorites() in script.js -->
+            <ul class="favorites-list" id="favorites-list" aria-label="Saved favorite quotes"></ul>
+        </section>
+
+        <!-- Footer with name -->
+        <footer class="site-footer">
+            <span class="footer-cross" aria-hidden="true">&#10013;</span>
+            <p>Made with faith &amp; love by <strong>Maria</strong></p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

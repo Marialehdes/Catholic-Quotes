@@ -1,0 +1,1458 @@
+╭─── Claude Code v2.1.119 ─────────────────────────────────────────────────────╮
+│                             │ Tips for getting started                       │
+│     Welcome back Maria!     │ Run /init to create a CLAUDE.md file with ins… │
+│                             │ ────────────────────────────────────────────── │
+│           ▐▛███▜▌           │ Recent activity                                │
+│          ▝▜█████▛▘          │ No recent activity                             │
+│            ▘▘ ▝▝            │                                                │
+│                             │                                                │
+│   Sonnet 4.6 · Claude Pro   │                                                │
+│      ~\quote-generator      │                                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+> I want to build a Catholic Quote Generator web app using HTML, CSS, and       
+  JavaScript.                                                                   
+                                                                                
+  Requirements:                                                                 
+  - Display a random quote when the page loads                                  
+  - Include a button to generate a new quote                                    
+  - Quotes should come from an array in JavaScript (no API needed)              
+  - Each quote should include the text and the author (e.g., a saint or Bible   
+  reference)                                                                    
+                                                                                
+  Design requirements:                                                          
+  - Create a clean, modern, and visually appealing design                       
+  - Use a soft, elegant color palette (light neutrals, gold accents, or calming 
+   tones)                                                                       
+  - Center the content in a card-style layout                                   
+  - Use nice typography (serif font for quotes if possible)                     
+  - Add subtle animations when changing quotes (fade in/out)                    
+  - Include a button with hover effects                                         
+                                                                                
+  Code requirements:                                                            
+  - Separate HTML, CSS, and JavaScript                                          
+  - Keep the code simple and readable                                           
+  - Include comments explaining key parts                                       
+                                                                                
+  Content:                                                                      
+  - Include at least 10–15 Catholic-inspired quotes                             
+  - Mix of saints, scripture, and inspirational messages                        
+                                                                                
+  Bonus (if simple to implement):                                               
+  - Add a category filter (Saints, Scripture, Inspiration)                      
+  - Add a small icon or symbol for visual style                                 
+                                                                                
+  Please provide:                                                               
+  1. Full HTML file                                                             
+  2. Full CSS file                                                              
+  3. Full JavaScript file                                                       
+  4. Instructions to run the project                                            
+
+● I'll build the full Catholic Quote Generator with three separate files — HTML,
+   CSS, and JavaScript — in your working directory.
+
+● Write(index.html)
+  ⎿  Wrote 66 lines to index.html
+       2 <html lang="en">
+       3 <head>
+       5     <meta name="viewport" content="width=device-width, initial-s
+         cale=1.0">
+       6     <title>Catholic Quote Generator</title>
+       8     <!-- Playfair Display (serif, for quotes) and Lato (sans-ser
+         if, for UI) -->
+         r+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;7
+         00&display=swap" rel="stylesheet">
+      10 </head>
+     … +70 lines (ctrl+o to expand)
+
+● Write(styles.css)
+  ⎿  Wrote 261 lines to styles.css
+       2    Catholic Quote Generator — styles.css=======================
+       3    Color palette: warm cream, deep charcoal, gold accents
+         */ ============================================================ 
+       5 
+         /* --- Design Tokens ----------------------------------------- *
+       7 :root {
+         d      */            #F6F1E9;       /* Warm cream page backgroun
+       9     --card:          #FFFFFF;       /* White card surface       
+      10     --gold:          #B8890A;       /* Primary gold accent      
+                 */
+     … +262 lines (ctrl+o to expand)
+
+● Write(script.js)
+  ⎿  Wrote 199 lines to script.js
+      1 // ============================================================
+      2 // Catholic Quote Generator — script.js
+      3 // ============================================================
+      4 
+      5 // --- Quote Data ---------------------------------------------
+      6 // Each quote has three fields:
+      7 //   text     — the quote itself
+      8 //   author   — the saint, scripture reference, or source
+      9 //   category — "saints" | "scripture" | "inspiration"
+     … +223 lines (ctrl+o to expand)
+
+● All three files are created. Here's a summary of everything built:
+
+  ---
+  What was built
+
+  Files:
+  quote-generator/
+  ├── index.html    — structure and layout
+  ├── styles.css    — all visual design
+  └── script.js     — quotes data and all logic
+
+  Features included:
+  - 22 quotes across three categories (10 Saints, 7 Scripture, 5 Inspiration)
+  - Category filter buttons (All / Saints / Scripture / Inspiration)
+  - Random quote on page load, no back-to-back repeats
+  - Fade in/out animation on every quote change (0.4s CSS transition)
+  - Gold cross symbol ✝ as the page icon
+  - Decorative large " quotation mark on the card
+  - Category badge pill on each quote
+  - Button with lift + glow hover effect
+
+  Design choices:
+  - Warm cream background (#F6F1E9) with soft gold radial glows
+  - White card with a 4px gold top border and deep shadow
+  - Playfair Display (serif, italic) for quotes — elegant and readable
+  - Lato (sans-serif) for UI elements
+  - Gold accent color (#B8890A) throughout
+
+  ---
+  How to run it
+
+  No build tools or server needed — it's plain HTML/CSS/JS.
+
+  Option A — Double-click:
+  Open index.html directly in any browser (Chrome, Edge, Firefox, Safari).
+
+  Option B — VS Code Live Server:
+  Right-click index.html in VS Code → Open with Live Server (auto-reloads on
+  save).
+
+  Option C — Terminal:
+  # Python (most systems have it)
+  python -m http.server 5500
+  # Then open http://localhost:5500
+
+  The Google Fonts (Playfair Display, Lato) load from the CDN, so an internet
+  connection is needed for the full typography. The app works offline but will
+  fall back to generic serif/sans-serif fonts.
+
+✻ Crunched for 3m 26s
+
+※ recap: Built a Catholic Quote Generator web app with three separate files: index.html, styles.css, and script.js. Open index.html in a browser to run it. (disable recaps in /config)
+
+> I really like how the Catholic Quote Generator turned out. I want to improve  
+  it with a few enhancements.                                                   
+                                                                                
+  Please update the project with the following:                                 
+                                                                                
+  1. Add more quotes:                                                           
+  - Increase the number of quotes to at least 20–25                             
+  - Keep them a mix of saints, scripture, and inspirational Catholic messages   
+                                                                                
+  2. Add a “Save Favorite” feature:                                             
+  - Include a button that allows users to save a quote                          
+  - Save favorite quotes using localStorage                                     
+  - Display saved quotes in a separate section below the main quote             
+  - Allow users to remove a saved quote if possible                             
+                                                                                
+  3. Improve mobile responsiveness:                                             
+  - Make sure the layout looks good on phones                                   
+  - Use responsive design (flexbox, media queries, etc.)                        
+  - Ensure text is readable and buttons are easy to tap                         
+  - Keep the design centered and clean on smaller screens                       
+                                                                                
+  4. Add a footer:                                                              
+  - At the bottom of the page, display a my name                                
+  - Keep it minimal and styled to match the design                              
+                                                                                
+  5. Keep the design consistent:                                                
+  - Maintain the same aesthetic (clean, elegant, soft colors)                   
+  - Keep animations and styling smooth and modern                               
+                                                                                
+  Please update:                                                                
+  - HTML                                                                        
+  - CSS                                                                         
+  - JavaScript                                                                  
+                                                                                
+  And explain any new parts of the code (especially localStorage for favorites  
+  and responsive design).                                                       
+                                                                                
+
+● Let me read all three existing files before making changes.
+
+  Read 3 files (ctrl+o to expand)
+
+● Good, I have a clear picture of all three files. Now I'll update them all —
+  adding quotes, the favorites feature, better mobile responsiveness, and the
+  footer with your name.
+
+● Write(index.html)
+  ⎿  Added 31 lines, removed 15 lines
+      22          <!-- Main quote card -->
+      23          <main class="card">
+      24  
+      25 -            <!-- Category filter buttons (bonus feature) -->   
+      25 +            <!-- Category filter buttons -->                   
+      26              <div class="filters" role="group" aria-label="Filte
+          r quotes by category">
+      27                  <button class="filter-btn active" data-category
+          ="all">All</button>
+      28                  <button class="filter-btn" data-category="saint
+          s">Saints</button>
+     ...
+      32  
+      33              <!-- Quote display area — fades in/out on change --
+          >
+      34              <div class="quote-container" id="quote-container">
+      35 -                <!-- Decorative large quotation mark -->       
+      35                  <div class="quote-mark" aria-hidden="true">&ldq
+          uo;</div>
+      37 -                                                               
+      38 -                <!-- The quote text (filled by JavaScript) --> 
+      36                  <blockquote class="quote-text" id="quote-text">
+          </blockquote>
+      40 -                                                               
+      41 -                <!-- Gold divider line -->                     
+      37                  <div class="divider" aria-hidden="true"></div>
+      43 -                                                               
+      44 -                <!-- Author name (filled by JavaScript) -->    
+      38                  <cite class="quote-author" id="quote-author"></
+          cite>
+      46 -                                                               
+      47 -                <!-- Small category badge (filled by JavaScript
+         -) -->                                                          
+      39                  <span class="category-badge" id="category-badge
+          "></span>
+      40              </div>
+      41  
+      51 -            <!-- Button to show a new random quote -->         
+      52 -            <button class="btn-new-quote" id="btn-new-quote" ar
+         -ia-label="Show a new quote">                                   
+      53 -                New Quote                                      
+      54 -            </button>                                          
+      42 +            <!--                                               
+      43 +                Two action buttons: New Quote (primary) and Sav
+         +e Favorite (outline).                                          
+      44 +                On small screens these stack vertically via a m
+         +edia query.                                                    
+      45 +            -->                                                
+      46 +            <div class="card-actions">                         
+      47 +                <button class="btn-new-quote" id="btn-new-quote
+         +" aria-label="Show a new quote">                               
+      48 +                    New Quote                                  
+      49 +                </button>                                      
+      50 +                <button class="btn-save" id="btn-save" aria-lab
+         +el="Save this quote to favorites" aria-pressed="false">        
+      51 +                    &#9825; Save                               
+      52 +                </button>                                      
+      53 +            </div>                                             
+      54  
+      55          </main>
+      56  
+      57 +        <!--                                                   
+      58 +            Favorites section.                                 
+      59 +            Hidden by default (via the `hidden` attribute) and 
+         +revealed by JavaScript                                         
+      60 +            only when at least one quote has been saved. JavaSc
+         +ript builds the list                                           
+      61 +            items dynamically using DOM methods, so no static c
+         +ontent lives here.                                             
+      62 +        -->                                                    
+      63 +        <section class="favorites-section" id="favorites-sectio
+         +n" hidden aria-label="Saved favorites">                        
+      64 +            <div class="favorites-header">                     
+      65 +                <span class="fav-header-icon" aria-hidden="true
+         +">&#9829;</span>                                               
+      66 +                <h2 class="favorites-title">Saved Favorites</h2
+         +>                                                              
+      67 +            </div>                                             
+      68 +            <!-- Favorite quote items are injected here by rend
+         +erFavorites() in script.js -->                                 
+      69 +            <ul class="favorites-list" id="favorites-list" aria
+         +-label="Saved favorite quotes"></ul>                           
+      70 +        </section>                                             
+      71 +                                                               
+      72 +        <!-- Footer with name -->                              
+      73          <footer class="site-footer">
+      59 -            <p>Inspired by faith &bull; Built with love</p>    
+      74 +            <span class="footer-cross" aria-hidden="true">&#100
+         +13;</span>                                                     
+      75 +            <p>Made with faith &amp; love by <strong>Maria</str
+         +ong></p>                                                       
+      76          </footer>
+      77  
+      78      </div>
+
+● Write(styles.css)
+  ⎿  Added 309 lines, removed 46 lines
+       1  /* ============================================================
+       2 -   Catholic Quote Generator — styles.css                       
+       2 +   Catholic Quote Generator — styles.css (v2)                  
+       3     Color palette: warm cream, deep charcoal, gold accents
+       4     ============================================================
+           */
+       5  
+       6  /* --- Design Tokens ----------------------------------------- 
+          */
+       7  :root {
+       8 -    --bg:            #F6F1E9;       /* Warm cream page backgrou
+         -nd      */                                                     
+       9 -    --card:          #FFFFFF;       /* White card surface      
+         -         */                                                    
+      10 -    --gold:          #B8890A;       /* Primary gold accent     
+         -         */                                                    
+      11 -    --gold-light:    #D4AF37;       /* Lighter gold for hover s
+         -tates    */                                                    
+      12 -    --gold-subtle:   rgba(212, 175, 55, 0.12);                 
+      13 -    --gold-border:   rgba(212, 175, 55, 0.30);                 
+      14 -    --text:          #2B2010;       /* Dark warm brown — main t
+         -ext      */                                                    
+      15 -    --text-muted:    #7A6A52;       /* Muted brown — secondary 
+         -text     */                                                    
+      16 -    --shadow:        0 8px 40px rgba(44, 36, 22, 0.13);        
+      17 -    --radius:        18px;                                     
+      18 -    --speed:         0.4s;                                     
+       8 +    --bg:           #F6F1E9;            /* Warm cream page back
+         +ground     */                                                  
+       9 +    --card:         #FFFFFF;            /* White card surface  
+         +            */                                                 
+      10 +    --gold:         #B8890A;            /* Primary gold accent 
+         +            */                                                 
+      11 +    --gold-light:   #D4AF37;            /* Lighter gold for hov
+         +er states   */                                                 
+      12 +    --gold-subtle:  rgba(212,175,55,.12);                      
+      13 +    --gold-border:  rgba(212,175,55,.30);                      
+      14 +    --text:         #2B2010;            /* Dark warm brown — ma
+         +in text     */                                                 
+      15 +    --text-muted:   #7A6A52;            /* Muted brown — second
+         +ary text    */                                                 
+      16 +    --danger:       #B03A2E;            /* Red used only for re
+         +move button */                                                 
+      17 +    --shadow:       0 8px 40px rgba(44,36,22,.13);             
+      18 +    --shadow-sm:    0 4px 18px rgba(44,36,22,.09);             
+      19 +    --radius:       18px;                                      
+      20 +    --radius-sm:    12px;                                      
+      21 +    --speed:        0.4s;                                      
+      22  }
+      23  
+      24  /* --- Reset --------------------------------------------------
+           */
+     ...
+      32  body {
+      33      font-family: 'Lato', sans-serif;
+      34      background-color: var(--bg);
+      32 -    /* Soft radial glows for depth */                          
+      35 +    /* Subtle gold radial glows add warmth to the background */
+      36      background-image:
+      34 -        radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0
+         -.09) 0%, transparent 55%),                                     
+      35 -        radial-gradient(circle at 85% 85%, rgba(212, 175, 55, 0
+         -.07) 0%, transparent 55%);                                     
+      37 +        radial-gradient(circle at 15% 15%, rgba(212,175,55,.09)
+         + 0%, transparent 55%),                                         
+      38 +        radial-gradient(circle at 85% 85%, rgba(212,175,55,.07)
+         + 0%, transparent 55%);                                         
+      39      min-height: 100vh;
+      40      display: flex;
+      38 -    align-items: center;                                       
+      41      justify-content: center;
+      42      color: var(--text);
+      41 -    padding: 1.5rem 1rem;                                      
+      43 +    padding: 2.5rem 1rem 3.5rem;                               
+      44  }
+      45  
+      46  /* --- Page wrapper ------------------------------------------ 
+          */
+      47 +/*                                                             
+      48 +   margin: auto on the wrapper vertically centers it when conte
+         +nt is short,                                                   
+      49 +   while still letting it scroll naturally when content (e.g. m
+         +any favorites)                                                 
+      50 +   is taller than the viewport. flex-direction: column stacks a
+         +ll sections.                                                   
+      51 +*/                                                             
+      52  .page-wrapper {
+      53      width: 100%;
+      54      max-width: 660px;
+      55 +    margin: auto;                                              
+      56      display: flex;
+      57      flex-direction: column;
+      58      align-items: center;
+     ...
+      68      gap: 0.3rem;
+      69  }
+      70  
+      63 -/* Latin cross symbol used as a visual icon */                 
+      71  .cross-symbol {
+      72      display: block;
+      73      font-size: 2.2rem;
+      74      color: var(--gold);
+      75      line-height: 1;
+      69 -    margin-bottom: 0.2rem;                                     
+      70 -    text-shadow: 0 2px 8px rgba(184, 137, 10, 0.25);           
+      76 +    margin-bottom: 0.25rem;                                    
+      77 +    text-shadow: 0 2px 8px rgba(184,137,10,.25);               
+      78  }
+      79  
+      80  .site-title {
+     ...
+      92      letter-spacing: 0.08em;
+      93  }
+      94  
+      88 -/* --- Card ---------------------------------------------------
+         - */                                                            
+      95 +/* --- Main Quote Card --------------------------------------- 
+         +*/                                                             
+      96  .card {
+      97      background: var(--card);
+      98      border-radius: var(--radius);
+     ...
+      112      gap: 0.5rem;
+      113      flex-wrap: wrap;
+      114      justify-content: center;
+      115 +    width: 100%;                                              
+      116  }
+      117  
+      118  .filter-btn {
+      111 -    padding: 0.35rem 1.1rem;                                  
+      119 +    /* min-height ensures 44px+ touch targets on mobile */    
+      120 +    padding: 0.45rem 1.1rem;                                  
+      121 +    min-height: 40px;                                         
+      122      border: 2px solid var(--gold);
+      123      background: var(--gold-subtle);
+      124      color: var(--text-muted);
+     ...
+      128      font-weight: 700;
+      129      letter-spacing: 0.07em;
+      130      text-transform: uppercase;
+      131 +    white-space: nowrap;                                      
+      132      cursor: pointer;
+      122 -    transition: background var(--speed), color var(--speed), b
+          -order-color var(--speed), transform 0.15s;                    
+      133 +    transition: background var(--speed), color var(--speed), b
+          +order-color var(--speed), transform .15s;                     
+      134  }
+      135  
+      136  .filter-btn:hover {
+     ...
+      146      color: #fff;
+      147  }
+      148  
+      138 -/* --- Quote container (fade animation target) ---------------
+          - */                                                           
+      149 +/* --- Quote Container (fade animation target) ---------------
+          + */                                                           
+      150  .quote-container {
+      151      text-align: center;
+      152      display: flex;
+     ...
+      154      align-items: center;
+      155      gap: 1rem;
+      156      width: 100%;
+      146 -    /* Smooth opacity transition for quote changes */         
+      157      opacity: 1;
+      158 +    /* This transition is what drives the fade-in/out animatio
+          +n */                                                          
+      159      transition: opacity var(--speed) ease;
+      160  }
+      161  
+      151 -/* Class toggled by JS to fade out before updating content */ 
+      162 +/* Added by JS before updating content; removed after to fade 
+          +back in */                                                    
+      163  .quote-container.fading {
+      164      opacity: 0;
+      165  }
+      166  
+      156 -/* Large decorative opening quote mark */                     
+      167  .quote-mark {
+      168      font-family: 'Playfair Display', serif;
+      169      font-size: 5.5rem;
+     ...
+      174      pointer-events: none;
+      175  }
+      176  
+      167 -/* The actual quote text — serif italic for elegance */       
+      177  .quote-text {
+      178      font-family: 'Playfair Display', serif;
+      179      font-size: 1.2rem;
+     ...
+      183      max-width: 500px;
+      184  }
+      185  
+      177 -/* Thin gold divider between quote and author */              
+      186  .divider {
+      187      width: 50px;
+      188      height: 2px;
+     ...
+      190      border-radius: 1px;
+      191  }
+      192  
+      185 -/* Author / source attribution */                             
+      193  .quote-author {
+      194      font-family: 'Lato', sans-serif;
+      195      font-size: 0.9rem;
+     ...
+      200      text-transform: uppercase;
+      201  }
+      202  
+      196 -/* Small pill badge showing the category */                   
+      203  .category-badge {
+      204      display: inline-block;
+      205      padding: 0.22rem 0.85rem;
+     ...
+      213      text-transform: uppercase;
+      214  }
+      215  
+      210 -/* --- New Quote button --------------------------------------
+          -- */                                                          
+      216 +/* --- Card Action Buttons (New Quote + Save) ----------------
+          + */                                                           
+      217 +/*                                                            
+      218 +   Flex row by default; stacks vertically on small screens    
+      219 +   via the 480px media query below.                           
+      220 +*/                                                            
+      221 +.card-actions {                                               
+      222 +    display: flex;                                            
+      223 +    gap: 0.75rem;                                             
+      224 +    flex-wrap: wrap;                                          
+      225 +    justify-content: center;                                  
+      226 +    width: 100%;                                              
+      227 +}                                                             
+      228 +                                                              
+      229 +/* Primary — New Quote */                                     
+      230  .btn-new-quote {
+      212 -    padding: 0.8rem 2.8rem;                                   
+      231 +    padding: 0.8rem 2.2rem;                                   
+      232 +    min-height: 48px;           /* Accessible tap target */   
+      233      background: var(--gold);
+      234      color: #fff;
+      235      border: none;
+     ...
+      240      letter-spacing: 0.1em;
+      241      text-transform: uppercase;
+      242      cursor: pointer;
+      223 -    /* Lift + glow effect on hover */                         
+      224 -    transition: background var(--speed), box-shadow var(--spee
+          -d), transform 0.15s;                                          
+      225 -    box-shadow: 0 4px 14px rgba(184, 137, 10, 0.30);          
+      243 +    transition: background var(--speed), box-shadow var(--spee
+          +d), transform .15s;                                           
+      244 +    box-shadow: 0 4px 14px rgba(184,137,10,.30);              
+      245  }
+      246  
+      247  .btn-new-quote:hover {
+      248      background: var(--gold-light);
+      230 -    box-shadow: 0 7px 22px rgba(212, 175, 55, 0.40);          
+      249 +    box-shadow: 0 7px 22px rgba(212,175,55,.40);              
+      250      transform: translateY(-2px);
+      251  }
+      252  
+      253  .btn-new-quote:active {
+      254      transform: translateY(0);
+      236 -    box-shadow: 0 2px 7px rgba(184, 137, 10, 0.25);           
+      255 +    box-shadow: 0 2px 7px rgba(184,137,10,.25);               
+      256  }
+      257  
+      239 -/* --- Footer ------------------------------------------------
+          -- */                                                          
+      240 -.site-footer {                                                
+      241 -    font-size: 0.75rem;                                       
+      258 +/* Secondary — Save Favorite (outline style) */               
+      259 +.btn-save {                                                   
+      260 +    padding: 0.8rem 1.8rem;                                   
+      261 +    min-height: 48px;           /* Accessible tap target */   
+      262 +    background: transparent;                                  
+      263 +    color: var(--gold);                                       
+      264 +    border: 2px solid var(--gold);                            
+      265 +    border-radius: 999px;                                     
+      266 +    font-family: 'Lato', sans-serif;                          
+      267 +    font-size: 0.9rem;                                        
+      268 +    font-weight: 700;                                         
+      269 +    letter-spacing: 0.08em;                                   
+      270 +    text-transform: uppercase;                                
+      271 +    cursor: pointer;                                          
+      272 +    transition: background var(--speed), color var(--speed), t
+          +ransform .15s;                                                
+      273 +}                                                             
+      274 +                                                              
+      275 +.btn-save:hover {                                             
+      276 +    background: var(--gold-subtle);                           
+      277 +    transform: translateY(-2px);                              
+      278 +}                                                             
+      279 +                                                              
+      280 +.btn-save:active {                                            
+      281 +    transform: translateY(0);                                 
+      282 +}                                                             
+      283 +                                                              
+      284 +/* State when the displayed quote is already saved */         
+      285 +.btn-save.saved {                                             
+      286 +    background: var(--gold-subtle);                           
+      287 +}                                                             
+      288 +                                                              
+      289 +/* ===========================================================
+          +=                                                             
+      290 +   Favorites Section                                          
+      291 +   Hidden via the `hidden` HTML attribute until JS reveals it.
+      292 +   Each item is built with createElement() in script.js.      
+      293 +   ===========================================================
+          += */                                                          
+      294 +.favorites-section {                                          
+      295 +    width: 100%;                                              
+      296 +    background: var(--card);                                  
+      297 +    border-radius: var(--radius);                             
+      298 +    box-shadow: var(--shadow-sm);                             
+      299 +    border-top: 3px solid var(--gold);                        
+      300 +    padding: 1.75rem 2rem 1.5rem;                             
+      301 +    display: flex;                                            
+      302 +    flex-direction: column;                                   
+      303 +    gap: 1rem;                                                
+      304 +    /* Slides up from below when the section first appears */ 
+      305 +    animation: slideIn .4s ease;                              
+      306 +}                                                             
+      307 +                                                              
+      308 +@keyframes slideIn {                                          
+      309 +    from { opacity: 0; transform: translateY(14px); }         
+      310 +    to   { opacity: 1; transform: translateY(0); }            
+      311 +}                                                             
+      312 +                                                              
+      313 +.favorites-header {                                           
+      314 +    display: flex;                                            
+      315 +    align-items: center;                                      
+      316 +    gap: 0.5rem;                                              
+      317 +}                                                             
+      318 +                                                              
+      319 +.fav-header-icon {                                            
+      320 +    color: var(--gold);                                       
+      321 +    font-size: 1.1rem;                                        
+      322 +}                                                             
+      323 +                                                              
+      324 +.favorites-title {                                            
+      325 +    font-family: 'Playfair Display', serif;                   
+      326 +    font-size: 1.15rem;                                       
+      327 +    font-weight: 600;                                         
+      328 +    color: var(--text);                                       
+      329 +}                                                             
+      330 +                                                              
+      331 +/* Reset default list styling */                              
+      332 +.favorites-list {                                             
+      333 +    list-style: none;                                         
+      334 +    display: flex;                                            
+      335 +    flex-direction: column;                                   
+      336 +    gap: 0.75rem;                                             
+      337 +}                                                             
+      338 +                                                              
+      339 +/* Individual saved quote row */                              
+      340 +.fav-item {                                                   
+      341 +    display: flex;                                            
+      342 +    align-items: flex-start;                                  
+      343 +    justify-content: space-between;                           
+      344 +    gap: 0.75rem;                                             
+      345 +    padding: 1rem 1.1rem;                                     
+      346 +    background: var(--gold-subtle);                           
+      347 +    border: 1px solid var(--gold-border);                     
+      348 +    border-radius: var(--radius-sm);                          
+      349 +    /* Brief pop-in animation each time an item is added */   
+      350 +    animation: fadeItem .3s ease;                             
+      351 +}                                                             
+      352 +                                                              
+      353 +@keyframes fadeItem {                                         
+      354 +    from { opacity: 0; transform: scale(.98); }               
+      355 +    to   { opacity: 1; transform: scale(1); }                 
+      356 +}                                                             
+      357 +                                                              
+      358 +/* Left column: quote text + author */                        
+      359 +.fav-content {                                                
+      360 +    flex: 1;            /* Grows to fill space, pushing remove
+          + btn right */                                                 
+      361 +    display: flex;                                            
+      362 +    flex-direction: column;                                   
+      363 +    gap: 0.3rem;                                              
+      364 +    text-align: left;                                         
+      365 +    min-width: 0;       /* Prevents long text from overflowing
+          + on mobile */                                                 
+      366 +}                                                             
+      367 +                                                              
+      368 +.fav-text {                                                   
+      369 +    font-family: 'Playfair Display', serif;                   
+      370 +    font-size: 0.92rem;                                       
+      371 +    font-style: italic;                                       
+      372 +    line-height: 1.55;                                        
+      373 +    color: var(--text);                                       
+      374 +    /* Wraps long quotes cleanly */                           
+      375 +    overflow-wrap: break-word;                                
+      376 +    word-break: break-word;                                   
+      377 +}                                                             
+      378 +                                                              
+      379 +.fav-author {                                                 
+      380 +    font-size: 0.74rem;                                       
+      381 +    font-weight: 700;                                         
+      382      color: var(--text-muted);
+      383      letter-spacing: 0.06em;
+      244 -    opacity: 0.65;                                            
+      384 +    text-transform: uppercase;                                
+      385 +}                                                             
+      386 +                                                              
+      387 +/* Remove (×) button — small circle in the top-right of each i
+          +tem */                                                        
+      388 +.btn-remove {                                                 
+      389 +    flex-shrink: 0;                                           
+      390 +    width: 30px;                                              
+      391 +    height: 30px;                                             
+      392 +    display: flex;                                            
+      393 +    align-items: center;                                      
+      394 +    justify-content: center;                                  
+      395 +    background: transparent;                                  
+      396 +    border: 1.5px solid rgba(176,58,46,.35);                  
+      397 +    color: var(--danger);                                     
+      398 +    border-radius: 50%;                                       
+      399 +    font-size: 1rem;                                          
+      400 +    line-height: 1;                                           
+      401 +    cursor: pointer;                                          
+      402 +    transition: background .2s, color .2s, border-color .2s;  
+      403 +    margin-top: 0.05rem;    /* Aligns visually with the first 
+          +line of text */                                               
+      404 +}                                                             
+      405 +                                                              
+      406 +.btn-remove:hover {                                           
+      407 +    background: var(--danger);                                
+      408 +    color: #fff;                                              
+      409 +    border-color: var(--danger);                              
+      410 +}                                                             
+      411 +                                                              
+      412 +/* --- Footer ------------------------------------------------
+          +- */                                                          
+      413 +.site-footer {                                                
+      414      text-align: center;
+      415 +    display: flex;                                            
+      416 +    flex-direction: column;                                   
+      417 +    align-items: center;                                      
+      418 +    gap: 0.25rem;                                             
+      419 +    font-size: 0.78rem;                                       
+      420 +    color: var(--text-muted);                                 
+      421 +    letter-spacing: 0.05em;                                   
+      422 +    opacity: 0.72;                                            
+      423 +    padding-bottom: 0.25rem;                                  
+      424  }
+      425  
+      248 -/* --- Responsive tweaks for small screens -------------------
+          - */                                                           
+      426 +.footer-cross {                                               
+      427 +    font-size: 0.9rem;                                        
+      428 +    color: var(--gold);                                       
+      429 +}                                                             
+      430 +                                                              
+      431 +.site-footer strong {                                         
+      432 +    color: var(--text);                                       
+      433 +    font-weight: 700;                                         
+      434 +    opacity: 1;                                               
+      435 +}                                                             
+      436 +                                                              
+      437 +/* ===========================================================
+          +==                                                            
+      438 +   Responsive Design                                          
+      439 +   ───────────────────────────────────────────────────────────
+          +──                                                            
+      440 +   Three breakpoints:                                         
+      441 +     600px  — medium phones, or phones in landscape           
+      442 +     480px  — standard small phones (most iPhones, Android)   
+      443 +     360px  — very small screens (compact Android phones)     
+      444 +                                                              
+      445 +   Key mobile principles applied:                             
+      446 +     • All interactive elements are ≥ 44px tall (tap targets) 
+      447 +     • Buttons stack vertically on narrow screens             
+      448 +     • Text sizes scale down gracefully                       
+      449 +     • Card padding shrinks so content breathes on small scree
+          +ns                                                            
+      450 +   ===========================================================
+          +== */                                                         
+      451 +                                                              
+      452 +@media (max-width: 600px) {                                   
+      453 +    body {                                                    
+      454 +        padding: 1.75rem 0.75rem 2.5rem;                      
+      455 +    }                                                         
+      456 +                                                              
+      457 +    .page-wrapper {                                           
+      458 +        gap: 1.25rem;                                         
+      459 +    }                                                         
+      460 +                                                              
+      461 +    .card,                                                    
+      462 +    .favorites-section {                                      
+      463 +        padding: 2rem 1.5rem 1.75rem;                         
+      464 +        border-radius: 14px;                                  
+      465 +    }                                                         
+      466 +}                                                             
+      467 +                                                              
+      468  @media (max-width: 480px) {
+      250 -    .card {                                                   
+      251 -        padding: 2rem 1.5rem 1.5rem;                          
+      469 +    .site-title {                                             
+      470 +        font-size: 1.65rem;                                   
+      471      }
+      472  
+      473      .quote-text {
+      474          font-size: 1.05rem;
+      475      }
+      476  
+      477 +    /*                                                        
+      478 +       Stack the two action buttons into a full-width column. 
+      479 +       align-items: stretch makes each button span the full ca
+          +rd width,                                                     
+      480 +       which is easier to tap on a touchscreen.               
+      481 +    */                                                        
+      482 +    .card-actions {                                           
+      483 +        flex-direction: column;                               
+      484 +        align-items: stretch;                                 
+      485 +    }                                                         
+      486 +                                                              
+      487 +    .btn-new-quote,                                           
+      488 +    .btn-save {                                               
+      489 +        width: 100%;                                          
+      490 +        text-align: center;                                   
+      491 +    }                                                         
+      492 +                                                              
+      493 +    .card,                                                    
+      494 +    .favorites-section {                                      
+      495 +        padding: 1.75rem 1.25rem 1.5rem;                      
+      496 +    }                                                         
+      497 +                                                              
+      498 +    .fav-item {                                               
+      499 +        padding: 0.85rem 0.9rem;                              
+      500 +    }                                                         
+      501 +}                                                             
+      502 +                                                              
+      503 +@media (max-width: 360px) {                                   
+      504      .site-title {
+      259 -        font-size: 1.65rem;                                   
+      505 +        font-size: 1.4rem;                                    
+      506      }
+      507 +                                                              
+      508 +    .site-subtitle {                                          
+      509 +        font-size: 0.78rem;                                   
+      510 +    }                                                         
+      511 +                                                              
+      512 +    .quote-text {                                             
+      513 +        font-size: 0.98rem;                                   
+      514 +    }                                                         
+      515 +                                                              
+      516 +    .filter-btn {                                             
+      517 +        font-size: 0.72rem;                                   
+      518 +        padding: 0.4rem 0.85rem;                              
+      519 +    }                                                         
+      520 +                                                              
+      521 +    .cross-symbol {                                           
+      522 +        font-size: 1.8rem;                                    
+      523 +    }                                                         
+      524  }
+
+● Write(script.js)
+  ⎿  Added 215 lines, removed 35 lines
+       1  // ============================================================
+       2 -// Catholic Quote Generator — script.js                        
+       2 +// Catholic Quote Generator — script.js (v2)                   
+       3  // ============================================================
+       4  
+       5  // --- Quote Data ---------------------------------------------
+       6 -// Each quote has three fields:                                
+       7 -//   text     — the quote itself                               
+       8 -//   author   — the saint, scripture reference, or source      
+       9 -//   category — "saints" | "scripture" | "inspiration"         
+       6 +// Each quote: { text, author, category }                      
+       7 +// category must be one of: "saints" | "scripture" | "inspirati
+         +on"                                                            
+       8  
+       9  const quotes = [
+      10  
+      13 -    // ---- Saints --------------------------------------------
+      11 +    // ---- Saints (14) ---------------------------------------
+      12      {
+      13          text: "You have made us for yourself, O Lord, and our h
+          eart is restless until it rests in you.",
+      14          author: "St. Augustine",
+     ...
+      55          category: "saints"
+      56      },
+      57      {
+      60 -        text: "It is not the actual physical exertion that coun
+         -ts towards one's progress, nor the nature of the task, but the 
+         -spirit of faith with which it is undertaken.",                 
+      58 +        text: "Do not lose your inner peace for anything whatso
+         +ever, even if your whole world seems upset.",                  
+      59          author: "St. Francis de Sales",
+      60          category: "saints"
+      61      },
+      62 +    {                                                          
+      63 +        text: "The things that we love tell us what we are.",  
+      64 +        author: "St. Thomas Aquinas",                          
+      65 +        category: "saints"                                     
+      66 +    },                                                         
+      67 +    {                                                          
+      68 +        text: "Without love, deeds, even the most brilliant, co
+         +unt as nothing.",                                              
+      69 +        author: "St. Thérèse of Lisieux",                      
+      70 +        category: "saints"                                     
+      71 +    },                                                         
+      72 +    {                                                          
+      73 +        text: "Act as if everything depended on you; trust as i
+         +f everything depended on God.",                                
+      74 +        author: "St. Ignatius of Loyola",                      
+      75 +        category: "saints"                                     
+      76 +    },                                                         
+      77 +    {                                                          
+      78 +        text: "The world offers you comfort. But you were not m
+         +ade for comfort. You were made for greatness.",                
+      79 +        author: "Pope Benedict XVI",                           
+      80 +        category: "saints"                                     
+      81 +    },                                                         
+      82  
+      65 -    // ---- Scripture -----------------------------------------
+      83 +    // ---- Scripture (10) ------------------------------------
+      84      {
+      85          text: "I can do all things through Christ who strengthe
+          ns me.",
+      86          author: "Philippians 4:13",
+     ...
+      116          author: "Jeremiah 29:11",
+      117          category: "scripture"
+      118      },
+      119 +    {                                                         
+      120 +        text: "Come to me, all you who are weary and burdened,
+          + and I will give you rest.",                                  
+      121 +        author: "Matthew 11:28",                              
+      122 +        category: "scripture"                                 
+      123 +    },                                                        
+      124 +    {                                                         
+      125 +        text: "Ask and it will be given to you; seek and you w
+          +ill find; knock and the door will be opened to you.",         
+      126 +        author: "Matthew 7:7",                                
+      127 +        category: "scripture"                                 
+      128 +    },                                                        
+      129 +    {                                                         
+      130 +        text: "Be strong and courageous. Do not be afraid; do 
+          +not be discouraged, for the Lord your God will be with you whe
+          +rever you go.",                                               
+      131 +        author: "Joshua 1:9",                                 
+      132 +        category: "scripture"                                 
+      133 +    },                                                        
+      134  
+      102 -    // ---- Inspiration --------------------------------------
+          --                                                             
+      135 +    // ---- Inspiration (8) ----------------------------------
+          +-                                                             
+      136      {
+      137          text: "The family that prays together stays together."
+           ,
+      138          author: "Ven. Patrick Peyton",
+     ...
+      158          author: "Archbishop Fulton J. Sheen",
+      159          category: "inspiration"
+      160      },
+      161 +    {                                                         
+      162 +        text: "Each of us makes his own weather, determines th
+          +e color of the skies in the emotional universe which he inhabi
+          +ts.",                                                         
+      163 +        author: "Archbishop Fulton J. Sheen",                 
+      164 +        category: "inspiration"                               
+      165 +    },                                                        
+      166 +    {                                                         
+      167 +        text: "Do not abandon yourselves to despair. We are th
+          +e Easter people and Hallelujah is our song.",                 
+      168 +        author: "Pope St. John Paul II",                      
+      169 +        category: "inspiration"                               
+      170 +    },                                                        
+      171 +    {                                                         
+      172 +        text: "Real love is not about feelings. It is not mere
+          +ly an emotion. It is a decision, a commitment, a way of life."
+          +,                                                             
+      173 +        author: "Pope Francis",                               
+      174 +        category: "inspiration"                               
+      175 +    },                                                        
+      176  ];
+      177  
+      178 +                                                              
+      179 +// ===========================================================
+          +==                                                            
+      180 +// Favorites — localStorage                                   
+      181 +// ===========================================================
+          +==                                                            
+      182 +//                                                            
+      183 +// localStorage is a browser API that stores key/value pairs a
+          +s                                                             
+      184 +// strings, permanently (until cleared). We use it to persist 
+          +the                                                           
+      185 +// user's saved quotes across page refreshes.                 
+      186 +//                                                            
+      187 +// JSON.stringify(array)  → converts our array to a JSON strin
+          +g for storage                                                 
+      188 +// JSON.parse(string)     → converts the stored string back to
+          + an array                                                     
+      189 +//                                                            
+      190 +// If the key doesn't exist yet, getItem() returns null; the "
+          +|| '[]'"                                                      
+      191 +// fallback gives us an empty array in that case.             
+      192 +//                                                            
+      193 +let favorites = JSON.parse(localStorage.getItem("catholicFavor
+          +ites") || "[]");                                              
+      194 +                                                              
+      195 +// Persist the current favorites array to localStorage        
+      196 +function persistFavorites() {                                 
+      197 +    localStorage.setItem("catholicFavorites", JSON.stringify(f
+          +avorites));                                                   
+      198 +}                                                             
+      199 +                                                              
+      200 +                                                              
+      201  // --- State -------------------------------------------------
+           -
+      131 -let activeCategory = "all";  // Which category filter is curre
+          -ntly active                                                   
+      132 -let lastIndex = -1;          // Tracks the last displayed quot
+          -e index (prevents repeats)                                    
+      202 +let activeCategory = "all";                                   
+      203 +let lastIndex      = -1;                                      
+      204 +let currentQuote   = null;   // The quote currently shown on t
+          +he card                                                       
+      205  
+      206 +                                                              
+      207  // --- DOM References ----------------------------------------
+           -
+      208  const quoteText      = document.getElementById("quote-text");
+      209  const quoteAuthor    = document.getElementById("quote-author")
+           ;
+      210  const categoryBadge  = document.getElementById("category-badge
+           ");
+      211  const quoteContainer = document.getElementById("quote-containe
+           r");
+      212  const newQuoteBtn    = document.getElementById("btn-new-quote"
+           );
+      213 +const saveBtn        = document.getElementById("btn-save");   
+      214  const filterButtons  = document.querySelectorAll(".filter-btn"
+           );
+      215 +const favSection     = document.getElementById("favorites-sect
+          +ion");                                                        
+      216 +const favList        = document.getElementById("favorites-list
+          +");                                                           
+      217  
+      142 -// --- Helper: pick a random quote from the active category --
+          --                                                             
+      218 +                                                              
+      219 +// --- Pick a random quote from the active category ----------
+          +-                                                             
+      220  function pickRandomQuote() {
+      144 -    // Build the filtered list based on the selected category 
+      221      const pool = activeCategory === "all"
+      222          ? quotes
+      223          : quotes.filter(q => q.category === activeCategory);
+      224  
+      225      if (pool.length === 0) return null;
+      226  
+      151 -    // Avoid showing the same quote back-to-back (when pool ha
+          -s more than one)                                              
+      227 +    // Avoid showing the same quote twice in a row            
+      228      let pick;
+      229      do {
+      230          pick = pool[Math.floor(Math.random() * pool.length)];
+      231      } while (pool.length > 1 && quotes.indexOf(pick) === lastI
+           ndex);
+      232  
+      157 -    // Remember this quote's index in the master array        
+      233      lastIndex = quotes.indexOf(pick);
+      234      return pick;
+      235  }
+      236  
+      162 -// --- Display a quote with a fade-out / fade-in animation ---
+          --                                                             
+      237 +                                                              
+      238 +// --- Display a quote with fade-out → update → fade-in ------
+          +-                                                             
+      239  function showQuote() {
+      164 -    // Step 1: fade out                                       
+      240 +    // Step 1: add .fading → CSS transitions opacity to 0     
+      241      quoteContainer.classList.add("fading");
+      242  
+      167 -    // Step 2: after the fade-out transition finishes, swap co
+          -ntent and fade in                                             
+      168 -    setTimeout(() => {                                        
+      169 -        const quote = pickRandomQuote();                      
+      170 -        if (!quote) return;                                   
+      243 +    // Step 2: after 400ms (matching --speed in CSS), swap con
+          +tent and remove .fading                                       
+      244 +    setTimeout(function() {                                   
+      245 +        currentQuote = pickRandomQuote();                     
+      246 +        if (!currentQuote) return;                            
+      247  
+      172 -        // Update the DOM with the new quote's content        
+      173 -        quoteText.textContent = quote.text;                   
+      174 -        quoteAuthor.textContent = "— " + quote.author;   // em
+          --dash prefix                                                  
+      175 -        categoryBadge.textContent = quote.category.charAt(0).t
+          -oUpperCase() + quote.category.slice(1);                       
+      248 +        quoteText.textContent   = currentQuote.text;          
+      249 +        quoteAuthor.textContent = "— " + currentQuote.author; 
+          + // — Author                                                  
+      250 +        categoryBadge.textContent =                           
+      251 +            currentQuote.category.charAt(0).toUpperCase() + cu
+          +rrentQuote.category.slice(1);                                 
+      252  
+      177 -        // Remove the fading class — CSS transition brings opa
+          -city back to 1                                                
+      178 -        quoteContainer.classList.remove("fading");            
+      179 -    }, 400); // Must match the transition duration in CSS (var
+          -(--speed) = 0.4s)                                             
+      253 +        // Keep the Save button in sync with whether this quot
+          +e is already saved                                            
+      254 +        updateSaveButton();                                   
+      255 +                                                              
+      256 +        quoteContainer.classList.remove("fading");  // fade ba
+          +ck in                                                         
+      257 +    }, 400);                                                  
+      258  }
+      259  
+      182 -// --- Category filter: update active state and refresh quote 
+          --                                                             
+      260 +                                                              
+      261 +// --- Sync the Save button with the current quote's saved sta
+          +te ---                                                        
+      262 +function updateSaveButton() {                                 
+      263 +    if (!currentQuote) return;                                
+      264 +                                                              
+      265 +    // .some() returns true if any item in favorites matches b
+          +y text                                                        
+      266 +    const isSaved = favorites.some(function(f) { return f.text
+          + === currentQuote.text; });                                   
+      267 +                                                              
+      268 +    saveBtn.textContent = isSaved ? "♥ Saved" : "♡ Save";   //
+          + ♥ or ♡                                                       
+      269 +    saveBtn.classList.toggle("saved", isSaved);               
+      270 +    saveBtn.setAttribute("aria-pressed", String(isSaved));    
+      271 +}                                                             
+      272 +                                                              
+      273 +                                                              
+      274 +// --- Save the current quote to favorites -------------------
+          +-                                                             
+      275 +function saveFavorite() {                                     
+      276 +    if (!currentQuote) return;                                
+      277 +                                                              
+      278 +    // Don't allow duplicate entries                          
+      279 +    const alreadySaved = favorites.some(function(f) { return f
+          +.text === currentQuote.text; });                              
+      280 +    if (alreadySaved) return;                                 
+      281 +                                                              
+      282 +    favorites.push(currentQuote);                             
+      283 +    persistFavorites();                                       
+      284 +                                                              
+      285 +    updateSaveButton();                                       
+      286 +    renderFavorites();                                        
+      287 +}                                                             
+      288 +                                                              
+      289 +                                                              
+      290 +// --- Remove a quote from favorites by its text -------------
+          +-                                                             
+      291 +//                                                            
+      292 +// We use the quote text as a unique key (all quotes have dist
+          +inct text).                                                   
+      293 +// Array.filter() returns every item that does NOT match, effe
+          +ctively removing it.                                          
+      294 +//                                                            
+      295 +function removeFavorite(quoteTextKey) {                       
+      296 +    favorites = favorites.filter(function(f) { return f.text !
+          +== quoteTextKey; });                                          
+      297 +    persistFavorites();                                       
+      298 +                                                              
+      299 +    // If the removed quote is currently displayed, update the
+          + Save button                                                  
+      300 +    updateSaveButton();                                       
+      301 +    renderFavorites();                                        
+      302 +}                                                             
+      303 +                                                              
+      304 +                                                              
+      305 +// --- Build the favorites section from the favorites array --
+          +-                                                             
+      306 +//                                                            
+      307 +// We use createElement() instead of innerHTML so that quote t
+          +ext                                                           
+      308 +// is set via textContent — safe even if a quote somehow conta
+          +ined                                                          
+      309 +// special characters (no HTML injection possible).           
+      310 +//                                                            
+      311 +function renderFavorites() {                                  
+      312 +    // Nothing saved → hide the whole section                 
+      313 +    if (favorites.length === 0) {                             
+      314 +        favSection.hidden = true;                             
+      315 +        return;                                               
+      316 +    }                                                         
+      317 +                                                              
+      318 +    // Show section and rebuild the list from scratch         
+      319 +    favSection.hidden = false;                                
+      320 +    favList.innerHTML = "";                                   
+      321 +                                                              
+      322 +    favorites.forEach(function(quote) {                       
+      323 +        // <li class="fav-item">                              
+      324 +        const li = document.createElement("li");              
+      325 +        li.className = "fav-item";                            
+      326 +                                                              
+      327 +        // Left side: quote text + author                     
+      328 +        const content = document.createElement("div");        
+      329 +        content.className = "fav-content";                    
+      330 +                                                              
+      331 +        const textEl = document.createElement("p");           
+      332 +        textEl.className = "fav-text";                        
+      333 +        // U+201C / U+201D are curly open/close double quotes 
+      334 +        textEl.textContent = "“" + quote.text + "”";          
+      335 +                                                              
+      336 +        const authorEl = document.createElement("span");      
+      337 +        authorEl.className = "fav-author";                    
+      338 +        authorEl.textContent = "— " + quote.author;           
+      339 +                                                              
+      340 +        content.appendChild(textEl);                          
+      341 +        content.appendChild(authorEl);                        
+      342 +                                                              
+      343 +        // Right side: remove (×) button                      
+      344 +        const removeBtn = document.createElement("button");   
+      345 +        removeBtn.className = "btn-remove";                   
+      346 +        removeBtn.setAttribute("aria-label", "Remove from favo
+          +rites");                                                      
+      347 +        removeBtn.textContent = "×";   // ×                   
+      348 +                                                              
+      349 +        // Capture quote.text in the closure for the click han
+          +dler                                                          
+      350 +        removeBtn.addEventListener("click", function() {      
+      351 +            removeFavorite(quote.text);                       
+      352 +        });                                                   
+      353 +                                                              
+      354 +        li.appendChild(content);                              
+      355 +        li.appendChild(removeBtn);                            
+      356 +        favList.appendChild(li);                              
+      357 +    });                                                       
+      358 +}                                                             
+      359 +                                                              
+      360 +                                                              
+      361 +// --- Category filter buttons -------------------------------
+          +-                                                             
+      362  filterButtons.forEach(function(btn) {
+      363      btn.addEventListener("click", function() {
+      185 -        // Move the "active" style to the clicked button      
+      364          filterButtons.forEach(function(b) { b.classList.remove
+           ("active"); });
+      365          btn.classList.add("active");
+      188 -                                                              
+      189 -        // Update state and show a quote from the new category
+      366          activeCategory = btn.dataset.category;
+      367          showQuote();
+      368      });
+      369  });
+      370  
+      195 -// --- New Quote button --------------------------------------
+          ---                                                            
+      371 +                                                              
+      372 +// --- Wire up main buttons ----------------------------------
+          +-                                                             
+      373  newQuoteBtn.addEventListener("click", showQuote);
+      374 +saveBtn.addEventListener("click", saveFavorite);              
+      375  
+      198 -// --- Show the first quote on page load ---------------------
+          --                                                             
+      199 -showQuote();                                                  
+      376 +                                                              
+      377 +// --- Initialize on page load -------------------------------
+          +-                                                             
+      378 +renderFavorites();  // Restore any favorites saved from a prev
+          +ious visit                                                    
+      379 +showQuote();        // Display the first random quote         
+
+● All three files are updated. Here's a breakdown of everything that changed and
+   why it works:
+
+  ---
+  What changed
+
+  Quotes
+
+  32 total (up from 22) — 14 saints, 10 scripture, 8 inspiration. New additions
+  include St. Thomas Aquinas, St. Thérèse of Lisieux, St. Ignatius of Loyola,
+  Pope Benedict XVI, Matthew 11:28, Joshua 1:9, Pope Francis, and more.
+
+  ---
+  Save Favorite — how it works
+
+  localStorage is a browser built-in that stores data as strings, permanently,
+  even after closing the tab:
+
+  // Save
+  localStorage.setItem("catholicFavorites", JSON.stringify(favorites));
+
+  // Load (on page open)
+  let favorites = JSON.parse(localStorage.getItem("catholicFavorites") || "[]");
+
+  The flow:
+  1. User clicks ♡ Save → saveFavorite() pushes the quote into the favorites
+  array and calls persistFavorites() to write it to localStorage
+  2. renderFavorites() rebuilds the list using createElement() (safe, no HTML
+  injection)
+  3. Each item gets a × button that calls removeFavorite(quote.text) — it
+  filters the array and re-renders
+  4. The Save button auto-updates to ♥ Saved / ♡ Save whenever a new quote
+  appears or a favorite is removed
+
+  ---
+  Responsive Design — three breakpoints
+
+  ┌────────────┬─────────────────────────────────────────────────────────────┐
+  │ Breakpoint │                        What changes                         │
+  ├────────────┼─────────────────────────────────────────────────────────────┤
+  │ ≤ 600px    │ Less body padding, slightly smaller card padding, softer    │
+  │            │ border radius                                               │
+  ├────────────┼─────────────────────────────────────────────────────────────┤
+  │ ≤ 480px    │ Title and quote text scale down; buttons stack full-width   │
+  │            │ vertically (easier to tap)                                  │
+  ├────────────┼─────────────────────────────────────────────────────────────┤
+  │ ≤ 360px    │ All text shrinks further; filter pills get tighter padding  │
+  └────────────┴─────────────────────────────────────────────────────────────┘
+
+  All buttons are min-height: 48px (the "New Quote" / "Save" buttons) or
+  min-height: 40px (filter pills) to meet the 44px recommended touch target
+  size. min-width: 0 on the favorite text container prevents long quotes from
+  overflowing on narrow screens.
+
+  ---
+  Footer
+
+  <footer class="site-footer">
+      <span class="footer-cross">✝</span>
+      <p>Made with faith &amp; love by <strong>Maria</strong></p>
+  </footer>
+  Styled in muted gold/brown to match the existing palette — understated but
+  consistent.
+
+  ---
+  To run
+
+  Open index.html directly in any browser — no server needed. Favorites persist
+  automatically across page reloads via localStorage.
+
+✻ Baked for 4m 51s
+
+> The "Save Favorite" button is not styled and looks out of place compared to   
+  the rest of the design.                                                       
+                                                                                
+  Please update the CSS to style the "Save Favorite" button so it matches the   
+  overall aesthetic of the app.                                                 
+                                                                                
+  Requirements:                                                                 
+  - Use the same color palette as the other buttons                             
+  - Add rounded corners                                                         
+  - Include padding and proper spacing                                          
+  - Add a hover effect (slight color change or shadow)                          
+  - Ensure it looks good on both desktop and mobile                             
+                                                                                
+  Make sure the button visually matches the existing design and feels           
+  consistent with the rest of the UI.                                           
+
+● Let me read the current CSS to see exactly what's there for .btn-save.
+
+  Read 1 file (ctrl+o to expand)
+
+● The styles are technically there but the button is visually weak — background:
+   transparent, no shadow, and a hover that only applies a barely-visible gold
+  tint. It needs the same lift-and-glow treatment as the primary button, just in
+   an outline flavor.
+
+● Update(styles.css)
+  ⎿  Added 13 lines, removed 7 lines
+      255      box-shadow: 0 2px 7px rgba(184,137,10,.25);
+      256  }
+      257  
+      258 -/* Secondary — Save Favorite (outline style) */               
+      258 +/* Secondary — Save Favorite (outline style, mirrors primary s
+          +izing/shape) */                                               
+      259  .btn-save {
+      260 -    padding: 0.8rem 1.8rem;                                   
+      261 -    min-height: 48px;           /* Accessible tap target */   
+      262 -    background: transparent;                                  
+      260 +    padding: 0.8rem 2.2rem;                                   
+      261 +    min-height: 48px;                                         
+      262 +    background: #fff;                                         
+      263      color: var(--gold);
+      264      border: 2px solid var(--gold);
+      265      border-radius: 999px;
+      266      font-family: 'Lato', sans-serif;
+      267      font-size: 0.9rem;
+      268      font-weight: 700;
+      269 -    letter-spacing: 0.08em;                                   
+      269 +    letter-spacing: 0.1em;                                    
+      270      text-transform: uppercase;
+      271      cursor: pointer;
+      272 -    transition: background var(--speed), color var(--speed), t
+          -ransform .15s;                                                
+      272 +    box-shadow: 0 4px 14px rgba(184,137,10,.15);              
+      273 +    transition: background var(--speed), color var(--speed),  
+      274 +                box-shadow var(--speed), transform .15s;      
+      275  }
+      276  
+      277  .btn-save:hover {
+      278      background: var(--gold-subtle);
+      279 +    box-shadow: 0 7px 22px rgba(212,175,55,.30);              
+      280      transform: translateY(-2px);
+      281  }
+      282  
+      283  .btn-save:active {
+      284      transform: translateY(0);
+      285 +    box-shadow: 0 2px 7px rgba(184,137,10,.15);               
+      286  }
+      287  
+      284 -/* State when the displayed quote is already saved */         
+      288 +/* Filled state — when the current quote is already saved */  
+      289  .btn-save.saved {
+      290      background: var(--gold-subtle);
+      291 +    color: var(--gold);                                       
+      292 +    box-shadow: 0 4px 14px rgba(184,137,10,.15);              
+      293  }
+      294  
+      295  /* ===========================================================
+           =
+
+● Here's what changed and why each fix matters:
+
+  Before: background: transparent
+  After: background: #fff
+  Why: Transparent made the button look unfinished against the white card; white
+
+    gives it a clear surface that matches the card itself
+  ────────────────────────────────────────
+  Before: No box-shadow
+  After: box-shadow: 0 4px 14px rgba(184,137,10,.15)
+  Why: The primary button has a gold shadow — this gives the Save button the
+  same
+    treatment at half the intensity (secondary hierarchy)
+  ────────────────────────────────────────
+  Before: box-shadow not in transition
+  After: Added to transition list
+  Why: Without it, the shadow snapped on/off instantly instead of fading
+  smoothly
+  ────────────────────────────────────────
+  Before: padding: 0.8rem 1.8rem
+  After: padding: 0.8rem 2.2rem
+  Why: Matched the horizontal padding of the New Quote button so both buttons
+  are
+    the same height and feel balanced side by side
+  ────────────────────────────────────────
+  Before: letter-spacing: 0.08em
+  After: letter-spacing: 0.1em
+  Why: Matched the primary button's letter spacing for visual consistency
+  ────────────────────────────────────────
+  Before: Hover: faint gold fill only
+  After: Hover: gold fill + lift + glow
+  Why: Now mirrors the primary button's hover behaviour — lift by 2px and glow —
+
+    just lighter
+  ────────────────────────────────────────
+  Before: .saved: same as hover
+  After: .saved: explicit background + shadow
+  Why: Saved state is now stable and distinct without hover jitter
+
+✻ Churned for 37s
+
+※ recap: Building a Catholic Quote Generator web app. The Save Favorite button styling was just fixed to match the rest of the UI. Ready for your next enhancement. (disable recaps in /config)

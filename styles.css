@@ -1,0 +1,530 @@
+/* ============================================================
+   Catholic Quote Generator — styles.css (v2)
+   Color palette: warm cream, deep charcoal, gold accents
+   ============================================================ */
+
+/* --- Design Tokens ----------------------------------------- */
+:root {
+    --bg:           #F6F1E9;            /* Warm cream page background     */
+    --card:         #FFFFFF;            /* White card surface              */
+    --gold:         #B8890A;            /* Primary gold accent             */
+    --gold-light:   #D4AF37;            /* Lighter gold for hover states   */
+    --gold-subtle:  rgba(212,175,55,.12);
+    --gold-border:  rgba(212,175,55,.30);
+    --text:         #2B2010;            /* Dark warm brown — main text     */
+    --text-muted:   #7A6A52;            /* Muted brown — secondary text    */
+    --danger:       #B03A2E;            /* Red used only for remove button */
+    --shadow:       0 8px 40px rgba(44,36,22,.13);
+    --shadow-sm:    0 4px 18px rgba(44,36,22,.09);
+    --radius:       18px;
+    --radius-sm:    12px;
+    --speed:        0.4s;
+}
+
+/* --- Reset -------------------------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Base --------------------------------------------------- */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg);
+    /* Subtle gold radial glows add warmth to the background */
+    background-image:
+        radial-gradient(circle at 15% 15%, rgba(212,175,55,.09) 0%, transparent 55%),
+        radial-gradient(circle at 85% 85%, rgba(212,175,55,.07) 0%, transparent 55%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: var(--text);
+    padding: 2.5rem 1rem 3.5rem;
+}
+
+/* --- Page wrapper ------------------------------------------ */
+/*
+   margin: auto on the wrapper vertically centers it when content is short,
+   while still letting it scroll naturally when content (e.g. many favorites)
+   is taller than the viewport. flex-direction: column stacks all sections.
+*/
+.page-wrapper {
+    width: 100%;
+    max-width: 660px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+/* --- Header ------------------------------------------------- */
+.site-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.cross-symbol {
+    display: block;
+    font-size: 2.2rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    text-shadow: 0 2px 8px rgba(184,137,10,.25);
+}
+
+.site-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text);
+}
+
+.site-subtitle {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+}
+
+/* --- Main Quote Card --------------------------------------- */
+.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--gold);
+    padding: 2.5rem 2.5rem 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+/* --- Category filter buttons ------------------------------- */
+.filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.filter-btn {
+    /* min-height ensures 44px+ touch targets on mobile */
+    padding: 0.45rem 1.1rem;
+    min-height: 40px;
+    border: 2px solid var(--gold);
+    background: var(--gold-subtle);
+    color: var(--text-muted);
+    border-radius: 999px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background var(--speed), color var(--speed), border-color var(--speed), transform .15s;
+}
+
+.filter-btn:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.filter-btn.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #fff;
+}
+
+/* --- Quote Container (fade animation target) --------------- */
+.quote-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    opacity: 1;
+    /* This transition is what drives the fade-in/out animation */
+    transition: opacity var(--speed) ease;
+}
+
+/* Added by JS before updating content; removed after to fade back in */
+.quote-container.fading {
+    opacity: 0;
+}
+
+.quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 5.5rem;
+    color: var(--gold-light);
+    line-height: 0.55;
+    opacity: 0.45;
+    user-select: none;
+    pointer-events: none;
+}
+
+.quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--text);
+    max-width: 500px;
+}
+
+.divider {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    border-radius: 1px;
+}
+
+.quote-author {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--text-muted);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 0.22rem 0.85rem;
+    background: var(--gold-subtle);
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+/* --- Card Action Buttons (New Quote + Save) ---------------- */
+/*
+   Flex row by default; stacks vertically on small screens
+   via the 480px media query below.
+*/
+.card-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Primary — New Quote */
+.btn-new-quote {
+    padding: 0.8rem 2.2rem;
+    min-height: 48px;           /* Accessible tap target */
+    background: var(--gold);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background var(--speed), box-shadow var(--speed), transform .15s;
+    box-shadow: 0 4px 14px rgba(184,137,10,.30);
+}
+
+.btn-new-quote:hover {
+    background: var(--gold-light);
+    box-shadow: 0 7px 22px rgba(212,175,55,.40);
+    transform: translateY(-2px);
+}
+
+.btn-new-quote:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 7px rgba(184,137,10,.25);
+}
+
+/* Secondary — Save Favorite (outline style, mirrors primary sizing/shape) */
+.btn-save {
+    padding: 0.8rem 2.2rem;
+    min-height: 48px;
+    background: #fff;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    border-radius: 999px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(184,137,10,.15);
+    transition: background var(--speed), color var(--speed),
+                box-shadow var(--speed), transform .15s;
+}
+
+.btn-save:hover {
+    background: var(--gold-subtle);
+    box-shadow: 0 7px 22px rgba(212,175,55,.30);
+    transform: translateY(-2px);
+}
+
+.btn-save:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 7px rgba(184,137,10,.15);
+}
+
+/* Filled state — when the current quote is already saved */
+.btn-save.saved {
+    background: var(--gold-subtle);
+    color: var(--gold);
+    box-shadow: 0 4px 14px rgba(184,137,10,.15);
+}
+
+/* ============================================================
+   Favorites Section
+   Hidden via the `hidden` HTML attribute until JS reveals it.
+   Each item is built with createElement() in script.js.
+   ============================================================ */
+.favorites-section {
+    width: 100%;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border-top: 3px solid var(--gold);
+    padding: 1.75rem 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* Slides up from below when the section first appears */
+    animation: slideIn .4s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.favorites-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fav-header-icon {
+    color: var(--gold);
+    font-size: 1.1rem;
+}
+
+.favorites-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Reset default list styling */
+.favorites-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Individual saved quote row */
+.fav-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1rem 1.1rem;
+    background: var(--gold-subtle);
+    border: 1px solid var(--gold-border);
+    border-radius: var(--radius-sm);
+    /* Brief pop-in animation each time an item is added */
+    animation: fadeItem .3s ease;
+}
+
+@keyframes fadeItem {
+    from { opacity: 0; transform: scale(.98); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* Left column: quote text + author */
+.fav-content {
+    flex: 1;            /* Grows to fill space, pushing remove btn right */
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: left;
+    min-width: 0;       /* Prevents long text from overflowing on mobile */
+}
+
+.fav-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.92rem;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--text);
+    /* Wraps long quotes cleanly */
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.fav-author {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Remove (×) button — small circle in the top-right of each item */
+.btn-remove {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1.5px solid rgba(176,58,46,.35);
+    color: var(--danger);
+    border-radius: 50%;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background .2s, color .2s, border-color .2s;
+    margin-top: 0.05rem;    /* Aligns visually with the first line of text */
+}
+
+.btn-remove:hover {
+    background: var(--danger);
+    color: #fff;
+    border-color: var(--danger);
+}
+
+/* --- Footer ------------------------------------------------- */
+.site-footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    opacity: 0.72;
+    padding-bottom: 0.25rem;
+}
+
+.footer-cross {
+    font-size: 0.9rem;
+    color: var(--gold);
+}
+
+.site-footer strong {
+    color: var(--text);
+    font-weight: 700;
+    opacity: 1;
+}
+
+/* =============================================================
+   Responsive Design
+   ─────────────────────────────────────────────────────────────
+   Three breakpoints:
+     600px  — medium phones, or phones in landscape
+     480px  — standard small phones (most iPhones, Android)
+     360px  — very small screens (compact Android phones)
+
+   Key mobile principles applied:
+     • All interactive elements are ≥ 44px tall (tap targets)
+     • Buttons stack vertically on narrow screens
+     • Text sizes scale down gracefully
+     • Card padding shrinks so content breathes on small screens
+   ============================================================= */
+
+@media (max-width: 600px) {
+    body {
+        padding: 1.75rem 0.75rem 2.5rem;
+    }
+
+    .page-wrapper {
+        gap: 1.25rem;
+    }
+
+    .card,
+    .favorites-section {
+        padding: 2rem 1.5rem 1.75rem;
+        border-radius: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.65rem;
+    }
+
+    .quote-text {
+        font-size: 1.05rem;
+    }
+
+    /*
+       Stack the two action buttons into a full-width column.
+       align-items: stretch makes each button span the full card width,
+       which is easier to tap on a touchscreen.
+    */
+    .card-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-new-quote,
+    .btn-save {
+        width: 100%;
+        text-align: center;
+    }
+
+    .card,
+    .favorites-section {
+        padding: 1.75rem 1.25rem 1.5rem;
+    }
+
+    .fav-item {
+        padding: 0.85rem 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .site-title {
+        font-size: 1.4rem;
+    }
+
+    .site-subtitle {
+        font-size: 0.78rem;
+    }
+
+    .quote-text {
+        font-size: 0.98rem;
+    }
+
+    .filter-btn {
+        font-size: 0.72rem;
+        padding: 0.4rem 0.85rem;
+    }
+
+    .cross-symbol {
+        font-size: 1.8rem;
+    }
+}
