@@ -6,7 +6,7 @@ A clean, elegant web app that displays inspiring Catholic quotes from saints, sc
 
 ## Description
 
-The Catholic Quote Generator presents a beautifully styled quote card on every visit. Users can cycle through quotes, filter by category, save their favorites, and return to them anytime — all without an account or internet connection beyond the initial font load.
+The Catholic Quote Generator presents a beautifully styled quote card on every visit. Users can cycle through quotes, filter by category, save their favorites, and return to them anytime, all without an account or internet connection beyond the initial font load.
 
 ---
 
