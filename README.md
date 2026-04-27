@@ -51,7 +51,10 @@ That's it — the app runs entirely in the browser.
 
 ## Screenshots
 
+### Quote card with category filters
 ![Quote card with category filters](img/screenshot-one.png)
+
+### Saved favorites section on mobile
 ![Saved favorites section on mobile](img/screenshot-two.png)
 
 ---
