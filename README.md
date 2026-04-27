@@ -1,6 +1,6 @@
 # Catholic Quote Generator
 
-A clean, elegant web app that displays inspiring Catholic quotes from saints, scripture, and tradition. Built with vanilla HTML, CSS, and JavaScript — no frameworks, no dependencies.
+A clean, elegant web app that displays inspiring Catholic quotes from saints, scripture, and tradition. Built with vanilla HTML, CSS, and JavaScript (no frameworks, no dependencies.)
 
 ---
 
@@ -58,10 +58,10 @@ That's it — the app runs entirely in the browser.
 
 ## What I Learned
 
-- How to use **localStorage** to persist data between browser sessions without a backend
-- How to build a clean, polished UI using only vanilla CSS — flexbox, CSS variables, transitions, and animations
-- How to write modular JavaScript: separating data, state, and DOM updates into focused functions
-- How responsive design decisions (stacking buttons, scaling type, touch-friendly tap targets) affect real usability on mobile
+- Strengthened my understanding of using **localStorage** to persist data without relying on a backend
+- Reinforced my ability to build clean, polished interfaces using vanilla CSS, including flexbox, transitions, and responsive design techniques
+- Improved how I structure JavaScript by organizing code into clear, focused functions for better readability and maintainability
+- Gained more experience designing for mobile, focusing on layout adjustments, readability, and touch-friendly interactions
 
 ---
 
