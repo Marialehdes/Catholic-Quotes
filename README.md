@@ -51,8 +51,8 @@ That's it — the app runs entirely in the browser.
 
 ## Screenshots
 
-![Quote card with category filters]()
-![Saved favorites section on mobile]()
+![Quote card with category filters](img/screenshot-one.png)
+![Saved favorites section on mobile](img/screenshot-two.png)
 
 ---
 
